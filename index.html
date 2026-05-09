@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO Primary -->
+  <title>EPI Clothing — Ropa para Mentes Brillantes | Tecnología, Ciencia & Código</title>
+  <meta name="description" content="EPI es la marca de ropa juvenil para programadores, científicos y matemáticos. Diseños únicos inspirados en código, geometría, física y química. ¡Viste tu pasión!" />
+  <meta name="keywords" content="ropa programacion, camisetas tecnologia, ropa matematicas, ropa geek, ropa nerd, ropa fisica quimica, ropa juvenil ciencia, ropa para programadores, EPI clothing, camisetas codigo" />
+  <meta name="author" content="EPI Clothing" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://epiclothing.com/" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://epiclothing.com/" />
+  <meta property="og:title" content="EPI Clothing — Ropa para Mentes Brillantes" />
+  <meta property="og:description" content="Diseños únicos inspirados en código, geometría, física y química. La marca juvenil para quienes piensan diferente." />
+  <meta property="og:image" content="https://epiclothing.com/og-image.jpg" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="EPI Clothing — Ropa para Mentes Brillantes" />
+  <meta name="twitter:description" content="La marca de ropa juvenil para programadores, matemáticos y científicos. Viste tu pasión." />
+
+  <!-- Schema.org Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ClothingStore",
+    "name": "EPI Clothing",
+    "description": "Marca de ropa juvenil inspirada en programación, tecnología, matemáticas, geometría, física, química y cálculo.",
+    "url": "https://epiclothing.com",
+    "logo": "https://epiclothing.com/logo.png",
+    "sameAs": [
+      "https://instagram.com/epiclothing",
+      "https://tiktok.com/@epiclothing"
+    ],
+    "offers": {
+      "@type": "AggregateOffer",
+      "priceCurrency": "MXN",
+      "availability": "https://schema.org/InStock"
+    }
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Custom cursor -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-ring" id="cursor-ring"></div>
+
+  <!-- Matrix canvas background -->
+  <canvas id="matrix-bg"></canvas>
+
+  <!-- NAV -->
+  <nav aria-label="Navegación principal">
+    <a href="#" class="nav-logo" aria-label="EPI Clothing inicio">EP<span>I</span></a>
+    <ul class="nav-links" role="list">
+      <li><a href="#productos">Colección</a></li>
+      <li><a href="#disciplinas">Disciplinas</a></li>
+      <li><a href="#nosotros">Nosotros</a></li>
+    </ul>
+    <a href="#productos" class="nav-cta" aria-label="Comprar ahora">COMPRAR</a>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero" role="banner">
+    <div class="hero-content">
+      <div class="hero-tag" aria-label="Nueva colección disponible">Nueva colección 2025</div>
+      <h1 class="hero-headline">
+        <span class="line1">Viste</span>
+        <span class="line2">lo que</span>
+        <span class="line3">piensas.</span>
+      </h1>
+      <p class="hero-sub">
+        Ropa diseñada para <span class="highlight">mentes que compilan el mundo</span>. 
+        Cada prenda es una ecuación. Cada diseño, un algoritmo. 
+        Tu pasión hecha tela.
+      </p>
+      <div class="hero-actions">
+        <a href="#productos" class="btn-primary" aria-label="Ver colección completa">
+          Ver Colección →
+        </a>
+        <a href="#manifesto" class="btn-secondary">
+          Nuestro Manifiesto
+        </a>
+      </div>
+    </div>
+
+    <div class="hero-visual" aria-hidden="true">
+      <!-- Inline SVG T-shirt hero -->
+      <svg class="tshirt-mockup" viewBox="0 0 300 340" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <defs>
+          <linearGradient id="shirtGrad" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#111820"/>
+            <stop offset="100%" stop-color="#0d1117"/>
+          </linearGradient>
+          <filter id="glow">
+            <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+            <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+          </filter>
+        </defs>
+        <!-- Shirt shape -->
+        <path d="M75,20 L0,70 L35,90 L35,320 L265,320 L265,90 L300,70 L225,20 C220,35 210,50 150,55 C90,50 80,35 75,20Z" fill="url(#shirtGrad)" stroke="#2979ff" stroke-width="1.5"/>
+        <!-- Collar -->
+        <path d="M110,22 Q150,60 190,22" fill="none" stroke="#2979ff" stroke-width="1.5"/>
+        <!-- Design on shirt -->
+        <text x="150" y="140" text-anchor="middle" font-family="Space Mono" font-size="11" fill="#2979ff" filter="url(#glow)">F(x) = ∫∑(n→∞)</text>
+        <text x="150" y="165" text-anchor="middle" font-family="Space Mono" font-size="9" fill="#40c4ff" opacity="0.8">while(alive) { learn(); }</text>
+        <text x="150" y="190" text-anchor="middle" font-family="Space Mono" font-size="11" fill="#b388ff" filter="url(#glow)">E = mc²</text>
+        <text x="150" y="215" text-anchor="middle" font-family="Space Mono" font-size="8" fill="#ff3cac" opacity="0.7">∇ × B = μ₀J + μ₀ε₀∂E/∂t</text>
+        <!-- Small EPI logo -->
+        <text x="150" y="290" text-anchor="middle" font-family="Space Mono" font-size="10" fill="#6b7a8d">EPI™</text>
+      </svg>
+
+      <div class="badge-float b1" aria-hidden="true">100% Algodón orgánico</div>
+      <div class="badge-float b2" aria-hidden="true">≥ 42 diseños únicos</div>
+      <div class="badge-float b3" aria-hidden="true">Envío gratis $999+</div>
+    </div>
+  </header>
+
+  <!-- TICKER -->
+  <div class="ticker" aria-hidden="true" role="marquee">
+    <div class="ticker-track" id="ticker-track">
+      <span class="ticker-item">CÓDIGO <span>×</span></span>
+      <span class="ticker-item">MATEMÁTICAS <span>×</span></span>
+      <span class="ticker-item">FÍSICA <span>×</span></span>
+      <span class="ticker-item">QUÍMICA <span>×</span></span>
+      <span class="ticker-item">GEOMETRÍA <span>×</span></span>
+      <span class="ticker-item">CÁLCULO <span>×</span></span>
+      <span class="ticker-item">ALGORITMOS <span>×</span></span>
+      <span class="ticker-item">TECNOLOGÍA <span>×</span></span>
+      <span class="ticker-item">EPI CLOTHING <span>×</span></span>
+      <!-- duplicate for seamless loop -->
+      <span class="ticker-item">CÓDIGO <span>×</span></span>
+      <span class="ticker-item">MATEMÁTICAS <span>×</span></span>
+      <span class="ticker-item">FÍSICA <span>×</span></span>
+      <span class="ticker-item">QUÍMICA <span>×</span></span>
+      <span class="ticker-item">GEOMETRÍA <span>×</span></span>
+      <span class="ticker-item">CÁLCULO <span>×</span></span>
+      <span class="ticker-item">ALGORITMOS <span>×</span></span>
+      <span class="ticker-item">TECNOLOGÍA <span>×</span></span>
+      <span class="ticker-item">EPI CLOTHING <span>×</span></span>
+    </div>
+  </div>
+
+  <!-- PRODUCTS -->
+  <section id="productos" aria-labelledby="productos-title">
+    <div class="products-header">
+      <div>
+        <p class="section-label reveal">// Colección actual</p>
+        <h2 class="section-title reveal" id="productos-title">Drop 01:<br>Syntax Error</h2>
+      </div>
+      <a href="#" class="btn-secondary reveal" aria-label="Ver todos los productos">Ver todo →</a>
+    </div>
+
+    <div class="products-grid">
+
+      <!-- Card 1 -->
+      <article class="product-card reveal" aria-label="Camiseta Hello World">
+        <div class="product-img" style="background:#0d1117;">
+          <span class="product-tag">NEW</span>
+          <svg class="tshirt-svg" viewBox="0 0 200 230" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M50,14 L0,48 L24,60 L24,215 L176,215 L176,60 L200,48 L150,14 C147,24 140,34 100,37 C60,34 53,24 50,14Z" fill="#111820" stroke="#2979ff" stroke-width="1"/>
+            <text x="100" y="95" text-anchor="middle" font-family="Space Mono" font-size="8" fill="#2979ff">print("Hello,</text>
+            <text x="100" y="113" text-anchor="middle" font-family="Space Mono" font-size="8" fill="#2979ff">World!")</text>
+            <text x="100" y="138" text-anchor="middle" font-family="Space Mono" font-size="7" fill="#40c4ff" opacity="0.7">// Versión 1.0.0</text>
+            <rect x="60" y="150" width="80" height="1" fill="#2979ff" opacity="0.3"/>
+            <text x="100" y="168" text-anchor="middle" font-family="Space Mono" font-size="6" fill="#6b7a8d">EPI™ × CODE</text>
+          </svg>
+          <div class="product-overlay"><a href="#" aria-label="Agregar Hello World al carrito">Agregar →</a></div>
+        </div>
+        <div class="product-info">
+          <h3 class="product-name">Hello World</h3>
+          <p class="product-desc">// El clásico de todo programador<br>Unisex · S–XXL</p>
+          <span class="product-price">$399 MXN</span>
+        </div>
+      </article>
+
+      <!-- Card 2 -->
+      <article class="product-card reveal" aria-label="Camiseta Euler's Identity">
+        <div class="product-img" style="background:#080b10;">
+          <span class="product-tag" style="background:var(--pink);">HOT</span>
+          <svg class="tshirt-svg" viewBox="0 0 200 230" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M50,14 L0,48 L24,60 L24,215 L176,215 L176,60 L200,48 L150,14 C147,24 140,34 100,37 C60,34 53,24 50,14Z" fill="#0d0a14" stroke="#ff3cac" stroke-width="1"/>
+            <text x="100" y="90" text-anchor="middle" font-family="Space Mono" font-size="22" fill="#ff3cac" font-weight="bold">e^iπ</text>
+            <text x="100" y="115" text-anchor="middle" font-family="Space Mono" font-size="22" fill="white">+1=0</text>
+            <text x="100" y="145" text-anchor="middle" font-family="Space Mono" font-size="7" fill="#ff3cac" opacity="0.7">La ecuación más bella</text>
+            <text x="100" y="168" text-anchor="middle" font-family="Space Mono" font-size="6" fill="#6b7a8d">EPI™ × MATH</text>
+          </svg>
+          <div class="product-overlay"><a href="#" aria-label="Agregar Euler's Identity al carrito">Agregar →</a></div>
+        </div>
+        <div class="product-info">
+          <h3 class="product-name">Euler's Identity</h3>
+          <p class="product-desc">// La ecuación más bella<br>Unisex · S–XXL</p>
+          <span class="product-price">$399 MXN</span>
+        </div>
+      </article>
+
+      <!-- Card 3 -->
+      <article class="product-card reveal" aria-label="Camiseta Quantum State">
+        <div class="product-img" style="background:#060d10;">
+          <span class="product-tag" style="background:var(--cyan); color:#000;">SALE</span>
+          <svg class="tshirt-svg" viewBox="0 0 200 230" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M50,14 L0,48 L24,60 L24,215 L176,215 L176,60 L200,48 L150,14 C147,24 140,34 100,37 C60,34 53,24 50,14Z" fill="#060d10" stroke="#40c4ff" stroke-width="1"/>
+            <!-- Atom diagram -->
+            <ellipse cx="100" cy="115" rx="45" ry="18" fill="none" stroke="#40c4ff" stroke-width="1" opacity="0.6"/>
+            <ellipse cx="100" cy="115" rx="45" ry="18" fill="none" stroke="#40c4ff" stroke-width="1" opacity="0.6" transform="rotate(60 100 115)"/>
+            <ellipse cx="100" cy="115" rx="45" ry="18" fill="none" stroke="#40c4ff" stroke-width="1" opacity="0.6" transform="rotate(120 100 115)"/>
+            <circle cx="100" cy="115" r="6" fill="#40c4ff"/>
+            <text x="100" y="158" text-anchor="middle" font-family="Space Mono" font-size="7" fill="#40c4ff">QUANTUM STATE</text>
+            <text x="100" y="172" text-anchor="middle" font-family="Space Mono" font-size="6" fill="#6b7a8d">EPI™ × PHYSICS</text>
+          </svg>
+          <div class="product-overlay"><a href="#" aria-label="Agregar Quantum State al carrito">Agregar →</a></div>
+        </div>
+        <div class="product-info">
+          <h3 class="product-name">Quantum State</h3>
+          <p class="product-desc">// Schrödinger aprueba<br>Unisex · S–XXL</p>
+          <span class="product-price"><s style="color:var(--muted);font-size:0.8rem">$499</s> $349 MXN</span>
+        </div>
+      </article>
+
+      <!-- Card 4 -->
+      <article class="product-card reveal" aria-label="Camiseta Hex Grid">
+        <div class="product-img" style="background:#0b0b08;">
+          <svg class="tshirt-svg" viewBox="0 0 200 230" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M50,14 L0,48 L24,60 L24,215 L176,215 L176,60 L200,48 L150,14 C147,24 140,34 100,37 C60,34 53,24 50,14Z" fill="#0b0b08" stroke="#b388ff" stroke-width="1"/>
+            <!-- Hex pattern -->
+            <g opacity="0.7">
+              <polygon points="100,75 115,84 115,102 100,111 85,102 85,84" fill="none" stroke="#b388ff" stroke-width="1.2"/>
+              <polygon points="70,93 85,102 85,120 70,129 55,120 55,102" fill="none" stroke="#b388ff" stroke-width="0.8" opacity="0.5"/>
+              <polygon points="130,93 145,102 145,120 130,129 115,120 115,102" fill="none" stroke="#b388ff" stroke-width="0.8" opacity="0.5"/>
+              <polygon points="100,111 115,120 115,138 100,147 85,138 85,120" fill="none" stroke="#b388ff" stroke-width="0.8" opacity="0.5"/>
+            </g>
+            <text x="100" y="168" text-anchor="middle" font-family="Space Mono" font-size="7" fill="#b388ff">HEXAGONAL GRID</text>
+            <text x="100" y="181" text-anchor="middle" font-family="Space Mono" font-size="6" fill="#6b7a8d">EPI™ × GEOMETRY</text>
+          </svg>
+          <div class="product-overlay"><a href="#" aria-label="Agregar Hex Grid al carrito">Agregar →</a></div>
+        </div>
+        <div class="product-info">
+          <h3 class="product-name">Hex Grid</h3>
+          <p class="product-desc">// Geometría en estado puro<br>Unisex · S–XXL</p>
+          <span class="product-price">$449 MXN</span>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- DISCIPLINES -->
+  <section id="disciplinas" aria-labelledby="disciplinas-title">
+    <p class="section-label reveal">// Inspirado en</p>
+    <h2 class="section-title reveal" id="disciplinas-title">Nuestras<br>Disciplinas</h2>
+
+    <div class="disciplines-grid reveal">
+      <div class="discipline-card">
+        <span class="disc-count">01</span>
+        <span class="disc-icon">💻</span>
+        <h3 class="disc-title">Programación & Código</h3>
+        <p class="disc-desc">Sintaxis, algoritmos, estructuras de datos. Diseños que hablan el lenguaje de las máquinas.</p>
+      </div>
+      <div class="discipline-card">
+        <span class="disc-count">02</span>
+        <span class="disc-icon">∑</span>
+        <h3 class="disc-title">Matemáticas</h3>
+        <p class="disc-desc">Ecuaciones, series, fractales y la belleza abstracta de los números en cada hilo.</p>
+      </div>
+      <div class="discipline-card">
+        <span class="disc-count">03</span>
+        <span class="disc-icon">⚛</span>
+        <h3 class="disc-title">Física & Química</h3>
+        <p class="disc-desc">Desde la mecánica cuántica hasta la tabla periódica. La ciencia que mueve el universo.</p>
+      </div>
+      <div class="discipline-card">
+        <span class="disc-count">04</span>
+        <span class="disc-icon">⬡</span>
+        <h3 class="disc-title">Geometría</h3>
+        <p class="disc-desc">Patrones, poliedros, topología. Las formas que definen el espacio y la naturaleza.</p>
+      </div>
+      <div class="discipline-card">
+        <span class="disc-count">05</span>
+        <span class="disc-icon">∫</span>
+        <h3 class="disc-title">Cálculo</h3>
+        <p class="disc-desc">Derivadas, integrales, límites. El lenguaje del cambio y la transformación continua.</p>
+      </div>
+      <div class="discipline-card">
+        <span class="disc-count">06</span>
+        <span class="disc-icon">🔬</span>
+        <h3 class="disc-title">Tecnología</h3>
+        <p class="disc-desc">Hardware, redes, IA. La vanguardia de lo que la humanidad construye.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- MANIFESTO -->
+  <section id="manifesto" aria-labelledby="manifesto-title">
+    <div class="manifesto-inner">
+      <p class="section-label reveal" style="text-align:center;">// EPI Manifiesto</p>
+      <h2 class="manifesto-quote reveal" id="manifesto-title">
+        No eres solo un estudiante.<br>
+        Eres el próximo <em>commit</em><br>
+        en la historia del <span class="alt">universo.</span>
+      </h2>
+      <p class="hero-sub reveal" style="margin: 0 auto 0; text-align:center; max-width:550px;">
+        EPI nació para los que llenan libretas de ecuaciones, debuggean a las 3am y ven patrones donde otros ven caos. Esta ropa es tuya.
+      </p>
+
+      <div class="formula-strip reveal" aria-hidden="true">
+        <span class="formula-pill">F = ma</span>
+        <span class="formula-pill">∇²φ = 0</span>
+        <span class="formula-pill">i² = −1</span>
+        <span class="formula-pill">PV = nRT</span>
+        <span class="formula-pill">∑∞ = −1/12</span>
+        <span class="formula-pill">01101001</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT / FEATURES -->
+  <section id="nosotros" aria-labelledby="nosotros-title">
+    <div class="features-grid">
+      <div>
+        <p class="section-label reveal">// Por qué EPI</p>
+        <h2 class="section-title reveal" id="nosotros-title">Calidad que<br>no tiene bugs.</h2>
+
+        <div class="feature-list">
+          <div class="feature-item reveal">
+            <span class="feature-num">01</span>
+            <div>
+              <h3 class="feature-title">Algodón 100% orgánico</h3>
+              <p class="feature-desc">Materiales certificados GOTS. Cómodo, duradero y sostenible. Sin variables de entorno dañinas.</p>
+            </div>
+          </div>
+          <div class="feature-item reveal">
+            <span class="feature-num">02</span>
+            <div>
+              <h3 class="feature-title">Diseños originales</h3>
+              <p class="feature-desc">Cada prenda es código revisado, aprobado y compilado por diseñadores con background científico.</p>
+            </div>
+          </div>
+          <div class="feature-item reveal">
+            <span class="feature-num">03</span>
+            <div>
+              <h3 class="feature-title">Tallas inclusivas S–4XL</h3>
+              <p class="feature-desc">Cortes unisex que se adaptan a todos los tipos de cuerpo. El único tipo system que importa.</p>
+            </div>
+          </div>
+          <div class="feature-item reveal">
+            <span class="feature-num">04</span>
+            <div>
+              <h3 class="feature-title">Estampado en alta definición</h3>
+              <p class="feature-desc">Técnica DTG. El detalle de cada fórmula sobrevive a cientos de lavadas. Zero data loss.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Decorative visual box -->
+      <div class="visual-box reveal" aria-hidden="true">
+        <svg viewBox="0 0 400 400" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <radialGradient id="bgGrad" cx="50%" cy="50%">
+              <stop offset="0%" stop-color="#0d1117"/>
+              <stop offset="100%" stop-color="#080b10"/>
+            </radialGradient>
+          </defs>
+          <rect width="400" height="400" fill="url(#bgGrad)"/>
+          <!-- Animated rings -->
+          <circle cx="200" cy="200" r="80" fill="none" stroke="#2979ff" stroke-width="0.5" stroke-dasharray="4 8" opacity="0.4">
+            <animateTransform attributeName="transform" type="rotate" from="0 200 200" to="360 200 200" dur="20s" repeatCount="indefinite"/>
+          </circle>
+          <circle cx="200" cy="200" r="120" fill="none" stroke="#40c4ff" stroke-width="0.5" stroke-dasharray="2 12" opacity="0.3">
+            <animateTransform attributeName="transform" type="rotate" from="360 200 200" to="0 200 200" dur="30s" repeatCount="indefinite"/>
+          </circle>
+          <circle cx="200" cy="200" r="160" fill="none" stroke="#ff3cac" stroke-width="0.5" stroke-dasharray="6 10" opacity="0.2">
+            <animateTransform attributeName="transform" type="rotate" from="0 200 200" to="360 200 200" dur="45s" repeatCount="indefinite"/>
+          </circle>
+          <!-- Center atom -->
+          <circle cx="200" cy="200" r="8" fill="#2979ff"/>
+          <circle cx="200" cy="200" r="4" fill="#080b10"/>
+          <!-- Orbit electrons -->
+          <circle cx="280" cy="200" r="4" fill="#b388ff">
+            <animateTransform attributeName="transform" type="rotate" from="0 200 200" to="360 200 200" dur="6s" repeatCount="indefinite"/>
+          </circle>
+          <circle cx="200" cy="120" r="4" fill="#40c4ff">
+            <animateTransform attributeName="transform" type="rotate" from="120 200 200" to="480 200 200" dur="6s" repeatCount="indefinite"/>
+          </circle>
+          <!-- Text -->
+          <text x="200" y="370" text-anchor="middle" font-family="Space Mono" font-size="9" fill="#6b7a8d">EPI MOLECULAR DESIGN SYSTEM</text>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEWSLETTER -->
+  <section id="newsletter" aria-labelledby="newsletter-title">
+    <div class="newsletter-inner">
+      <p class="section-label">// Sé el primero en saber</p>
+      <h2 class="section-title" id="newsletter-title">Únete al<br>repositorio.</h2>
+      <p>Drops exclusivos, descuentos antes que nadie y contenido para mentes brillantes. Sin spam. Sin bugs.</p>
+      <form class="newsletter-form" role="form" aria-label="Formulario de suscripción" onsubmit="handleSubscribe(event)">
+        <label for="email-input" style="display:none">Correo electrónico</label>
+        <input type="email" id="email-input" placeholder="tu@email.com" required autocomplete="email" aria-label="Ingresa tu correo electrónico" />
+        <button type="submit" aria-label="Suscribirme">PUSH →</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer role="contentinfo">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#" class="nav-logo" aria-label="EPI Clothing">EP<span>I</span></a>
+        <p>Ropa para mentes que compilan el mundo. Tecnología, ciencia y diseño en cada hilo.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Tienda</h4>
+        <ul>
+          <li><a href="#">Camisetas</a></li>
+          <li><a href="#">Hoodies</a></li>
+          <li><a href="#">Accesorios</a></li>
+          <li><a href="#">Colecciones</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Info</h4>
+        <ul>
+          <li><a href="#">Guía de tallas</a></li>
+          <li><a href="#">Envíos</a></li>
+          <li><a href="#">Devoluciones</a></li>
+          <li><a href="#">Contacto</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Social</h4>
+        <ul>
+          <li><a href="#" aria-label="Instagram EPI Clothing">Instagram</a></li>
+          <li><a href="#" aria-label="TikTok EPI Clothing">TikTok</a></li>
+          <li><a href="#" aria-label="Twitter EPI Clothing">Twitter</a></li>
+          <li><a href="#" aria-label="GitHub EPI Clothing">GitHub</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 EPI Clothing. Todos los derechos reservados.</span>
+      <span style="color:var(--green);">Made with &lt;3 + caffeine</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
